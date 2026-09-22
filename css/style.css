@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+/* Palette matching the Power Logo */
+:root {
+  --primary-color: #0056b3;
+  --accent-color: #ffc107;
+  --text-color: #333333;
+  --bg-hover: #e9ecef;
+  --bg-color: #f8f9fc;
+  --card-bg: #ffffff;
+  --shadow: 0 8px 30px rgba(0,0,0,0.05);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  transition: all 0.3s ease;
+}
+
+header div a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.logo-svg {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+}
+
+header div a:hover .logo-svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+nav li {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+/* Mouse-over feedback */
+.nav-link:hover {
+  background-color: var(--bg-hover);
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Page indicator for currently active page */
+.nav-link.active {
+  border-bottom: 3px solid var(--accent-color);
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: transparent;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Main Content Area */
+main {
+  flex-grow: 1;
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #003d82 100%);
+  color: white;
+  border-radius: 24px;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Footer Requirements */
+footer {
+  background-color: white;
+  padding: 2.5rem 5%;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+  margin-top: auto;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+footer small {
+  color: #999;
+  font-size: 0.85rem;
+}
