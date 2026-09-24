@@ -1,7 +1,7 @@
 Generative AI Declaration & Reflection
 
 1. Tools Used
-- GitHub Copilot / ChatGPT: Used as a coding assistant for code completion, DOM syntax lookup, and CSS layout structuring in `T01(a)`.
+- Gemini: Used as a coding assistant for code completion, DOM syntax lookup, and CSS layout structuring in `T01(a)`.
 - KNIME K-AI (Optional): Used for node recommendations during data cleaning in `T01(b)`.
 
 2. Specific Applications & Workflow Integration
