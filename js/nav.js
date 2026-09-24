@@ -1,10 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", function() {
+    // Scroll Fade-in Animations
+    const fadeElements = document.querySelectorAll('.fade-in-section');
 
-  navLinks.forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active");
-    }
-  });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: stop observing once it's visible
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
 });

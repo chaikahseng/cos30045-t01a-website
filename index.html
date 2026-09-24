@@ -10,17 +10,21 @@
 </head>
 <body>
   <header>
-    <div>
-      <a href="index.html">
-        <svg class="logo-svg" viewBox="0 0 24 24">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linejoin="round" stroke-linecap="round"/>
-        </svg>
-        <span>EnergyStats</span>
-      </a>
-    </div>
+    <a class="brand" href="index.html">
+      <svg class="logo-svg" viewBox="0 0 24 24">
+        <defs>
+          <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00d2ff" />
+            <stop offset="100%" stop-color="#3a7bd5" />
+          </linearGradient>
+        </defs>
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span>EnergyStats</span>
+    </a>
     <nav>
       <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="televisions.html" class="nav-link">Televisions</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
       </ul>
@@ -29,29 +33,54 @@
 
   <main>
     <section class="hero">
-      <h1>Australian Appliance Energy Consumption</h1>
-      <p>Discover insights into how households across Australia consume energy, focusing on everyday appliances.</p>
+      <span class="eyebrow">Australian Appliance Insights</span>
+      <h1>Understand the energy behind the appliances you use <em>every day.</em></h1>
+      <p>Discover insights into how households across Australia consume energy, focusing on televisions and everyday appliances. Make data-driven choices for a lower-impact home.</p>
+      <a href="televisions.html" class="btn">Explore Televisions <span>→</span></a>
     </section>
 
-    <div class="card-grid">
-      <div class="card">
-        <h2>Energy Trends</h2>
-        <p>Household energy use in Australia has been evolving. With the rise of smart homes and energy-efficient appliances, understanding consumption patterns is more important than ever. We visualize the trends shaping our future.</p>
+    <section class="stats-section fade-in-section">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-num">5,000+</span>
+          <span class="stat-label">Appliance Models Analyzed</span>
+        </div>
+        <div class="stat-card accent">
+          <span class="stat-num">365</span>
+          <span class="stat-label">Days of Annual Energy Use</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">kWh</span>
+          <span class="stat-label">Standard Measurement Unit</span>
+        </div>
       </div>
-      <div class="card">
-        <h2>Why It Matters</h2>
-        <p>By understanding our energy consumption, we can make informed decisions to reduce our carbon footprint, lower electricity bills, and contribute to a sustainable environment for future generations.</p>
+    </section>
+
+    <section class="split-section fade-in-section">
+      <div class="split-content">
+        <div class="split-text">
+          <span class="eyebrow">The Big Picture</span>
+          <h2>Energy trends, <br><em>visualized.</em></h2>
+          <p>Household energy use in Australia has been evolving. With the rise of smart homes and energy-efficient appliances, understanding consumption patterns is more important than ever.</p>
+          <p>By understanding our energy consumption, we can make informed decisions to reduce our carbon footprint, lower electricity bills, and contribute to a sustainable environment for future generations.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h2>Data-Driven Insights</h2>
+            <p>Our data visualizations transform complex datasets into easy-to-understand charts, highlighting the major contributors to household energy use.</p>
+          </div>
+          <div class="card">
+            <h2>Real World Impact</h2>
+            <p>Comparing annual consumption before you buy can help reduce running costs and keep demand on the grid in check.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h2>Data-Driven Insights</h2>
-        <p>Our data visualizations transform complex datasets into easy-to-understand charts, highlighting the major contributors to household energy use.</p>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2026 Kah Seng CHAI 100072258 | COS30045 Data Visualisation</p>
-    <p><small>Generative AI (GitHub Copilot) was used to assist in structuring JavaScript navigation logic.</small></p>
+    <p><small>Generative AI (Gemini) was used to assist in structuring JavaScript navigation logic.</small></p>
   </footer>
 </body>
 </html>
